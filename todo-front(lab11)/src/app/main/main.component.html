@@ -1,0 +1,20 @@
+<ng-container *ngIf="!loading">
+  Loading...
+</ng-container>
+<ng-container *ngIf="loading">
+  <div>
+    <div *ngFor="let t of tasklists" (click)="getTasks(t)" >{{t.id}} - {{t.name}}</div>
+  </div>
+</ng-container>
+
+<div>
+    <hr>
+  <p>Tasks:</p>
+  <div *ngFor="let t of tasks" (click)="getTask(t)">{{t.id}} - {{t.name}}</div>
+</div>
+
+<div>
+  <hr>
+  <p>Task:</p>
+  <div>{{task.id}} - {{task.name}} - {{task.status}}</div>
+</div>
